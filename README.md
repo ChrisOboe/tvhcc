@@ -5,17 +5,20 @@ This project uses the tvheadend web api. This is the internal api for their
 webinterface. A proper tvheadend client would use the htsp protocol instead.
 This client is done quick and dirty and can break anytime.
 
-Features:
+## Features:
  * Display the epg
  * Display a list of channels
  * Start a stream in mpv
 
-Usage:
- * `tvhcc epg` for displaying epg
- * `tvhcc channels` for listing channels
- * `tvhcc play <channelName>` for starting mpv
+## Usage:
+ * `tvhcc <server> epg` for displaying epg
+ * `tvhcc <server> channels` for listing channels
+ * `tvhcc <server> play <channelName>` for starting mpv
 
-Todo:
+### Example:
+ `tvhcc http://192.168.1.1 epg`
+
+## Todo:
  * Add bash completion
  * Add configuration for video player
  * Try to find out if the broken sorting is the fault of my tvheadend configuration or if it's a tvheadend bug
