@@ -77,29 +77,29 @@ func play(api tvhapi.Tvhapi, channel string) {
 }
 
 func printUsage() {
-	fmt.Println("Usage: epg channels or play")
+	fmt.Println("Usage: tvhcc <server> [epg|channels|play <channelName>]")
 }
 
 func main() {
-	server := "http://tv.chump"
-	tvhapi := tvhapi.Init(server)
-
-	if len(os.Args) <= 1 {
+	if len(os.Args) <= 2 {
 		printUsage()
 		os.Exit(0)
 	}
 
-	switch os.Args[1] {
+	server := os.Args[1]
+	tvhapi := tvhapi.Init(server)
+
+	switch os.Args[2] {
 	case "epg":
 		drawEpg(tvhapi)
 	case "channels":
 		listChannels(tvhapi)
 	case "play":
-		if len(os.Args) <= 2 {
+		if len(os.Args) <= 3 {
 			printUsage()
 			os.Exit(0)
 		}
-		play(tvhapi, os.Args[2])
+		play(tvhapi, os.Args[3])
 	default:
 		printUsage()
 	}
