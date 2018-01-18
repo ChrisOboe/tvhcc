@@ -20,5 +20,6 @@ This client is done quick and dirty and can break anytime.
 
 ## Todo:
  * Add bash completion
- * Add configuration for video player
+ * Add configuration file (for videoplayer and default server)
+ * Nicer output with colors and fancy stuff
  * Try to find out if the broken sorting is the fault of my tvheadend configuration or if it's a tvheadend bug
