@@ -19,10 +19,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/ChrisOboe/tvhcc/tvhapi"
 	"golang.org/x/crypto/ssh/terminal"
 	"os"
 	"os/exec"
-	"tvhcc/tvhapi"
 )
 
 func listChannels(api tvhapi.Tvhapi) {
